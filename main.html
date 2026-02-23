@@ -1,88 +1,143 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>International Cabinets Group Corp | Cocinas de Calidad en Puerto Rico</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/jpeg" href="images/mainlogo_background.jpeg">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+
     <!-- Header -->
     <header>
         <nav>
             <a href="#inicio" class="logo"><img src="images/main_logo.jpg" alt="International Cabinets Group Corp"></a>
+
+            <!-- Desktop nav links -->
             <ul class="nav-links">
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#colecciones">Colecciones</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#garantia">Garantía</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#nosotros"    data-es="Nosotros"    data-en="About Us">Nosotros</a></li>
+                <li><a href="#colecciones" data-es="Colecciones" data-en="Collections">Colecciones</a></li>
+                <li><a href="#servicios"   data-es="Servicios"   data-en="Services">Servicios</a></li>
+                <li><a href="#garantia"    data-es="Garantía"    data-en="Warranty">Garantía</a></li>
+                <li><a href="#contacto"    data-es="Contacto"    data-en="Contact">Contacto</a></li>
             </ul>
-            <a href="#cotizacion" class="cta-button">Cotización</a>
+
+            <div class="nav-right">
+                <!-- Language toggle -->
+                <button class="lang-toggle" onclick="toggleLang()" aria-label="Switch language">
+                    <span class="lang-label">EN</span>
+                </button>
+                <!-- CTA -->
+                <a href="#cotizacion" class="cta-button" data-es="Cotización" data-en="Quote">Cotización</a>
+                <!-- Hamburger -->
+                <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </nav>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="#nosotros"    onclick="toggleMenu()" data-es="Nosotros"    data-en="About Us">Nosotros</a></li>
+                <li><a href="#colecciones" onclick="toggleMenu()" data-es="Colecciones" data-en="Collections">Colecciones</a></li>
+                <li><a href="#servicios"   onclick="toggleMenu()" data-es="Servicios"   data-en="Services">Servicios</a></li>
+                <li><a href="#garantia"    onclick="toggleMenu()" data-es="Garantía"    data-en="Warranty">Garantía</a></li>
+                <li><a href="#contacto"    onclick="toggleMenu()" data-es="Contacto"    data-en="Contact">Contacto</a></li>
+                <li><a href="#cotizacion"  onclick="toggleMenu()" data-es="Cotización"  data-en="Quote">Cotización</a></li>
+            </ul>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Diseño y Calidad en <span>Cada Detalle</span></h1>
-            <p>Transformamos espacios con muebles de alta calidad en PVC e Hidrófugo. Desde 2022 creando cocinas excepcionales en Puerto Rico.</p>
+            <h1 data-es="Diseño y Calidad en <span>Cada Detalle</span>" data-en="Design &amp; Quality in <span>Every Detail</span>">Diseño y Calidad en <span>Cada Detalle</span></h1>
+            <p data-es="Transformamos espacios con muebles de alta calidad en PVC e Hidrófugo. Desde 2022 creando cocinas excepcionales en Puerto Rico."
+               data-en="We transform spaces with high-quality PVC and moisture-resistant furniture. Since 2022 creating exceptional kitchens in Puerto Rico.">
+               Transformamos espacios con muebles de alta calidad en PVC e Hidrófugo. Desde 2022 creando cocinas excepcionales en Puerto Rico.
+            </p>
             <div class="hero-buttons">
-                <a href="#colecciones" class="btn-primary">Ver Colecciones</a>
-                <a href="#contacto" class="btn-secondary">Contáctanos</a>
+                <a href="#colecciones" class="btn-primary"   data-es="Ver Colecciones" data-en="View Collections">Ver Colecciones</a>
+                <a href="#contacto"    class="btn-secondary" data-es="Contáctanos"     data-en="Contact Us">Contáctanos</a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="nosotros" class="about">
-        <h2 class="section-title">Excelencia en Cada Proyecto</h2>
-        <p class="section-subtitle">Desde 2022, International Cabinets Group Corp ha sido sinónimo de calidad, innovación y diseño en Puerto Rico.</p>
+        <h2 class="section-title" data-es="Excelencia en Cada Proyecto" data-en="Excellence in Every Project">Excelencia en Cada Proyecto</h2>
+        <p class="section-subtitle"
+           data-es="Desde 2022, International Cabinets Group Corp ha sido sinónimo de calidad, innovación y diseño en Puerto Rico."
+           data-en="Since 2022, International Cabinets Group Corp has been synonymous with quality, innovation and design in Puerto Rico.">
+           Desde 2022, International Cabinets Group Corp ha sido sinónimo de calidad, innovación y diseño en Puerto Rico.
+        </p>
         
         <div class="about-content">
             <div class="about-text">
-                <h3>Materiales de Primera Calidad</h3>
-                <p>Trabajamos exclusivamente con materiales PVC e Hidrófugos, garantizando durabilidad, resistencia a la humedad y un acabado impecable que perdura en el tiempo.</p>
-                <p>Nuestro compromiso es crear espacios funcionales que reflejen tu estilo personal, combinando diseño contemporáneo con la más alta calidad en fabricación.</p>
-                <p><strong>Herrajes Premium:</strong> Todos nuestros herrajes, goznes y correderas son de la línea Hafele italiana y Salice Futura para gavetas y correderas, garantizando suavidad y durabilidad excepcional.</p>
+                <h3 data-es="Materiales de Primera Calidad" data-en="Premium Quality Materials">Materiales de Primera Calidad</h3>
+                <p data-es="Trabajamos exclusivamente con materiales PVC e Hidrófugos, garantizando durabilidad, resistencia a la humedad y un acabado impecable que perdura en el tiempo."
+                   data-en="We work exclusively with PVC and moisture-resistant materials, ensuring durability, humidity resistance and an impeccable finish that lasts over time.">
+                   Trabajamos exclusivamente con materiales PVC e Hidrófugos, garantizando durabilidad, resistencia a la humedad y un acabado impecable que perdura en el tiempo.
+                </p>
+                <p data-es="Nuestro compromiso es crear espacios funcionales que reflejen tu estilo personal, combinando diseño contemporáneo con la más alta calidad en fabricación."
+                   data-en="Our commitment is to create functional spaces that reflect your personal style, combining contemporary design with the highest manufacturing quality.">
+                   Nuestro compromiso es crear espacios funcionales que reflejen tu estilo personal, combinando diseño contemporáneo con la más alta calidad en fabricación.
+                </p>
+                <p>
+                    <strong data-es="Herrajes Premium:" data-en="Premium Hardware:">Herrajes Premium:</strong>
+                    <span data-es="Todos nuestros herrajes, goznes y correderas son de la línea Blum, garantizando suavidad y durabilidad excepcional."
+                          data-en="All our hardware, hinges and slides are from the Blum line, ensuring exceptional smoothness and durability.">
+                          Todos nuestros herrajes, goznes y correderas son de la línea Blum, garantizando suavidad y durabilidad excepcional.
+                    </span>
+                </p>
                 
                 <div class="features-grid">
                     <div class="feature-item">
-                        <div class="feature-icon">🏆</div>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>
+                        </div>
                         <div class="feature-text">
-                            <h4>Calidad Premium</h4>
-                            <p>Materiales PVC e Hidrófugos</p>
+                            <h4 data-es="Calidad Premium" data-en="Premium Quality">Calidad Premium</h4>
+                            <p data-es="Materiales PVC e Hidrófugos" data-en="PVC & Moisture-Resistant Materials">Materiales PVC e Hidrófugos</p>
                         </div>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-icon">🎨</div>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg>
+                        </div>
                         <div class="feature-text">
-                            <h4>Diseño Personalizado</h4>
-                            <p>Adaptado a tus necesidades</p>
+                            <h4 data-es="Diseño Personalizado" data-en="Custom Design">Diseño Personalizado</h4>
+                            <p data-es="Adaptado a tus necesidades" data-en="Tailored to your needs">Adaptado a tus necesidades</p>
                         </div>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-icon">⚡</div>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
+                        </div>
                         <div class="feature-text">
-                            <h4>Instalación Profesional</h4>
-                            <p>Equipo experto certificado</p>
+                            <h4 data-es="Instalación por Profesionales" data-en="Professional Installation">Instalación por Profesionales</h4>
+                            <p data-es="Equipo experto certificado" data-en="Certified expert team">Equipo experto certificado</p>
                         </div>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-icon">🔧</div>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/></svg>
+                        </div>
                         <div class="feature-text">
-                            <h4>Herrajes Italianos</h4>
-                            <p>Hafele y Salice Futura</p>
+                            <h4 data-es="Herrajes Blum" data-en="Blum Hardware">Herrajes Blum</h4>
+                            <p data-es="Calidad y precisión europea" data-en="European quality & precision">Calidad y precisión europea</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="about-image">
-                <!-- Placeholder for kitchen image -->
-                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, var(--espresso), var(--caramel)); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-                    PH
+                <div class="about-img-placeholder">
+                    <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1"><rect x="5" y="5" width="50" height="50" rx="2"/><rect x="5" y="5" width="25" height="32" rx="1"/><rect x="32" y="5" width="23" height="18" rx="1"/><rect x="32" y="25" width="23" height="12" rx="1"/><rect x="5" y="40" width="50" height="15" rx="1"/></svg>
+                    <p data-es="Imagen del showroom" data-en="Showroom image">Imagen del showroom</p>
                 </div>
             </div>
         </div>
@@ -90,59 +145,63 @@
 
     <!-- Collections Section -->
     <section id="colecciones" class="collections">
-        <h2 class="section-title">Nuestras Colecciones</h2>
-        <p class="section-subtitle">Cocinas diseñadas para cada espacio y necesidad, desde compactas hasta premium.</p>
+        <h2 class="section-title" data-es="Nuestras Colecciones" data-en="Our Collections">Nuestras Colecciones</h2>
+        <p class="section-subtitle"
+           data-es="Cocinas diseñadas para cada espacio y necesidad, desde compactas hasta premium."
+           data-en="Kitchens designed for every space and need, from compact to premium.">
+           Cocinas diseñadas para cada espacio y necesidad, desde compactas hasta premium.
+        </p>
         
         <div class="collections-grid">
             <div class="collection-card">
-                <div class="collection-image">
-                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
-                        PH
-                    </div>
-                </div>
+                <div class="collection-image ci-nova"></div>
                 <div class="collection-content">
                     <h3 class="collection-name">NOVA</h3>
-                    <p class="collection-size">Compacta - Hasta 12 Pies</p>
-                    <p class="collection-description">Perfecta para espacios reducidos sin sacrificar funcionalidad ni estilo. Diseño inteligente que maximiza cada centímetro.</p>
+                    <p class="collection-size" data-es="Compacta — Hasta 12 Pies" data-en="Compact — Up to 12 Feet">Compacta — Hasta 12 Pies</p>
+                    <p class="collection-description"
+                       data-es="Perfecta para espacios reducidos sin sacrificar funcionalidad ni estilo. Diseño inteligente que maximiza cada centímetro."
+                       data-en="Perfect for smaller spaces without sacrificing functionality or style. Smart design that maximizes every inch.">
+                       Perfecta para espacios reducidos sin sacrificar funcionalidad ni estilo. Diseño inteligente que maximiza cada centímetro.
+                    </p>
                 </div>
             </div>
 
             <div class="collection-card">
-                <div class="collection-image">
-                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
-                        PH
-                    </div>
-                </div>
+                <div class="collection-image ci-milan"></div>
                 <div class="collection-content">
                     <h3 class="collection-name">MILÁN</h3>
-                    <p class="collection-size">Mediana - Hasta 18 Pies</p>
-                    <p class="collection-description">El equilibrio perfecto entre espacio y diseño. Ideal para hogares modernos que buscan versatilidad y elegancia.</p>
+                    <p class="collection-size" data-es="Mediana — Hasta 18 Pies" data-en="Medium — Up to 18 Feet">Mediana — Hasta 18 Pies</p>
+                    <p class="collection-description"
+                       data-es="El equilibrio perfecto entre espacio y diseño. Ideal para hogares modernos que buscan versatilidad y elegancia."
+                       data-en="The perfect balance of space and design. Ideal for modern homes seeking versatility and elegance.">
+                       El equilibrio perfecto entre espacio y diseño. Ideal para hogares modernos que buscan versatilidad y elegancia.
+                    </p>
                 </div>
             </div>
 
             <div class="collection-card">
-                <div class="collection-image">
-                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
-                        PH
-                    </div>
-                </div>
+                <div class="collection-image ci-solara"></div>
                 <div class="collection-content">
                     <h3 class="collection-name">SOLARA</h3>
-                    <p class="collection-size">Grande - Hasta 25 Pies</p>
-                    <p class="collection-description">Espacios amplios que invitan a crear. Diseño expansivo con todas las comodidades para una cocina de ensueño.</p>
+                    <p class="collection-size" data-es="Grande — Hasta 25 Pies" data-en="Large — Up to 25 Feet">Grande — Hasta 25 Pies</p>
+                    <p class="collection-description"
+                       data-es="Espacios amplios que invitan a crear. Diseño expansivo con todas las comodidades para una cocina de ensueño."
+                       data-en="Generous spaces that invite creativity. Expansive design with all the comforts for a dream kitchen.">
+                       Espacios amplios que invitan a crear. Diseño expansivo con todas las comodidades para una cocina de ensueño.
+                    </p>
                 </div>
             </div>
 
             <div class="collection-card">
-                <div class="collection-image">
-                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
-                        PH
-                    </div>
-                </div>
+                <div class="collection-image ci-monaco"></div>
                 <div class="collection-content">
                     <h3 class="collection-name">MONACO</h3>
-                    <p class="collection-size">Premium / Signature - Hasta 30+ Pies</p>
-                    <p class="collection-description">La máxima expresión de lujo y funcionalidad. Diseño exclusivo para quienes no aceptan menos que lo extraordinario.</p>
+                    <p class="collection-size" data-es="Premium / Signature — 30+ Pies" data-en="Premium / Signature — 30+ Feet">Premium / Signature — 30+ Pies</p>
+                    <p class="collection-description"
+                       data-es="La máxima expresión de lujo y funcionalidad. Diseño exclusivo para quienes no aceptan menos que lo extraordinario."
+                       data-en="The ultimate expression of luxury and functionality. Exclusive design for those who accept nothing less than extraordinary.">
+                       La máxima expresión de lujo y funcionalidad. Diseño exclusivo para quienes no aceptan menos que lo extraordinario.
+                    </p>
                 </div>
             </div>
         </div>
@@ -150,217 +209,280 @@
 
     <!-- Services Section -->
     <section id="servicios" class="services">
-        <h2 class="section-title">Tipos de Muebles que Trabajamos</h2>
-        <p class="section-subtitle">Soluciones completas para cada rincón de tu hogar, fabricadas con los más altos estándares de calidad.</p>
+        <h2 class="section-title" data-es="Tipos de Muebles que Trabajamos" data-en="Furniture Types We Create">Tipos de Muebles que Trabajamos</h2>
+        <p class="section-subtitle"
+           data-es="Soluciones completas para cada rincón de tu hogar, fabricadas con los más altos estándares de calidad."
+           data-en="Complete solutions for every corner of your home, manufactured to the highest quality standards.">
+           Soluciones completas para cada rincón de tu hogar, fabricadas con los más altos estándares de calidad.
+        </p>
         
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">🚪</div>
-                <h3>Closets</h3>
-                <p>Organización inteligente con diseños personalizados que maximizan el espacio de almacenamiento.</p>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 6h18M3 12h18M3 18h18M5 3v18M19 3v18M5 9h14M5 15h14"/></svg>
+                </div>
+                <h3 data-es="Cocinas" data-en="Kitchens">Cocinas</h3>
+                <p data-es="Diseño y fabricación de cocinas de alta calidad en PVC e Hidrófugo, adaptadas a tu espacio y estilo de vida."
+                   data-en="Design and manufacturing of high-quality PVC and moisture-resistant kitchens, tailored to your space and lifestyle.">
+                   Diseño y fabricación de cocinas de alta calidad en PVC e Hidrófugo, adaptadas a tu espacio y estilo de vida.
+                </p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🛁</div>
-                <h3>Muebles para Baños</h3>
-                <p>Resistentes a la humedad, elegantes y funcionales para tu espacio de relajación.</p>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 10h18M7 4v6M17 4v6M7 10v10M17 10v10"/></svg>
+                </div>
+                <h3 data-es="Muebles para Baños" data-en="Bathroom Furniture">Muebles para Baños</h3>
+                <p data-es="Vanities, muebles y accesorios resistentes a la humedad, elegantes y funcionales para tu espacio de relajación."
+                   data-en="Vanities, furniture and accessories resistant to humidity, elegant and functional for your relaxation space.">
+                   Vanities, muebles y accesorios resistentes a la humedad, elegantes y funcionales para tu espacio de relajación.
+                </p>
             </div>
             <div class="service-card">
-                <div class="service-icon">📦</div>
-                <h3>Gaveteros</h3>
-                <p>Soluciones de almacenamiento versátiles con acabados de primera calidad.</p>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="3" width="20" height="14" rx="1"/><path d="M8 21h8M12 17v4M2 12h20"/></svg>
+                </div>
+                <h3 data-es="Unidades de Pared (TV Units)" data-en="Wall Units (TV Units)">Unidades de Pared (TV Units)</h3>
+                <p data-es="Unidades de entretenimiento y pared diseñadas para maximizar el espacio con estilo y funcionalidad modernos."
+                   data-en="Entertainment and wall units designed to maximize space with modern style and functionality.">
+                   Unidades de entretenimiento y pared diseñadas para maximizar el espacio con estilo y funcionalidad modernos.
+                </p>
             </div>
             <div class="service-card">
-                <div class="service-icon">✨</div>
-                <h3>Vanities</h3>
-                <p>Elegancia y funcionalidad combinadas en muebles de baño de diseño exclusivo.</p>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="2" width="16" height="20" rx="1"/><path d="M4 8h16M4 14h16M10 2v20M10 8v6"/></svg>
+                </div>
+                <h3 data-es="Closets" data-en="Closets">Closets</h3>
+                <p data-es="Organización inteligente con diseños personalizados que maximizan el espacio de almacenamiento con elegancia."
+                   data-en="Smart organization with custom designs that maximize storage space with elegance.">
+                   Organización inteligente con diseños personalizados que maximizan el espacio de almacenamiento con elegancia.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Warranty Section -->
     <section id="garantia" class="warranty">
-        <h2 class="section-title">Garantía y Términos de Servicio</h2>
-        <p class="section-subtitle">Tu tranquilidad es nuestra prioridad. Conoce nuestras garantías y políticas transparentes.</p>
+        <h2 class="section-title" data-es="Garantía y Términos de Servicio" data-en="Warranty & Service Terms">Garantía y Términos de Servicio</h2>
+        <p class="section-subtitle"
+           data-es="Tu tranquilidad es nuestra prioridad. Conoce nuestras garantías y políticas transparentes."
+           data-en="Your peace of mind is our priority. Learn about our warranties and transparent policies.">
+           Tu tranquilidad es nuestra prioridad. Conoce nuestras garantías y políticas transparentes.
+        </p>
         
         <div class="warranty-grid">
             <div class="warranty-card">
-                <h3><span class="warranty-icon">🛡️</span> Garantía de Calidad</h3>
+                <h3 data-es="Garantía de Calidad" data-en="Quality Warranty">Garantía de Calidad</h3>
                 <ul>
-                    <li>6 meses de garantía en defectos de manufactura</li>
-                    <li>Cobertura desde la fecha de instalación</li>
-                    <li>Materiales PVC e Hidrófugos certificados</li>
-                    <li>Herrajes Hafele italiana y Salice Futura</li>
+                    <li data-es="6 meses de garantía en defectos de manufactura" data-en="6-month warranty on manufacturing defects">6 meses de garantía en defectos de manufactura</li>
+                    <li data-es="Cobertura desde la fecha de instalación" data-en="Coverage from installation date">Cobertura desde la fecha de instalación</li>
+                    <li data-es="Materiales PVC e Hidrófugos certificados" data-en="Certified PVC and moisture-resistant materials">Materiales PVC e Hidrófugos certificados</li>
+                    <li data-es="Herrajes Blum de alta precisión" data-en="High-precision Blum hardware">Herrajes Blum de alta precisión</li>
                 </ul>
             </div>
 
             <div class="warranty-card">
-                <h3><span class="warranty-icon">⏱️</span> Tiempo de Entrega</h3>
+                <h3 data-es="Tiempo de Entrega" data-en="Delivery Time">Tiempo de Entrega</h3>
                 <ul>
-                    <li>Instalación en 10 semanas hábiles</li>
-                    <li>Notificación una semana antes de instalación</li>
-                    <li>Días laborables únicamente</li>
-                    <li>El área debe estar preparada para instalación</li>
+                    <li data-es="Instalación en 10 semanas hábiles" data-en="Installation within 10 business weeks">Instalación en 10 semanas hábiles</li>
+                    <li data-es="Notificación una semana antes de instalación" data-en="Notification one week before installation">Notificación una semana antes de instalación</li>
+                    <li data-es="Días laborables únicamente" data-en="Business days only">Días laborables únicamente</li>
+                    <li data-es="El área debe estar preparada para instalación" data-en="The area must be ready for installation">El área debe estar preparada para instalación</li>
                 </ul>
-                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">* Cargo adicional por almacenamiento si el área no está lista en la fecha programada</p>
+                <p style="margin-top:1rem;font-size:0.88rem;color:var(--warm-stone);"
+                   data-es="* Cargo adicional por almacenamiento si el área no está lista en la fecha programada"
+                   data-en="* Additional storage fee if area is not ready on the scheduled date">
+                   * Cargo adicional por almacenamiento si el área no está lista en la fecha programada
+                </p>
             </div>
 
             <div class="warranty-card">
-                <h3><span class="warranty-icon">💰</span> Condiciones de Pago</h3>
+                <h3 data-es="Condiciones de Pago" data-en="Payment Conditions">Condiciones de Pago</h3>
                 <ul>
-                    <li>Depósito inicial del 50% al firmar contrato</li>
-                    <li>50% restante al finalizar instalación</li>
-                    <li>Banco Popular - Cuenta: 171098218</li>
-                    <li>Ruta: 021502011</li>
+                    <li data-es="Depósito inicial del 50% al firmar contrato" data-en="50% initial deposit upon signing contract">Depósito inicial del 50% al firmar contrato</li>
+                    <li data-es="50% restante al finalizar instalación" data-en="Remaining 50% upon completion of installation">50% restante al finalizar instalación</li>
+                    <li data-es="Banco Popular — Cuenta: 171098218" data-en="Banco Popular — Account: 171098218">Banco Popular — Cuenta: 171098218</li>
+                    <li data-es="Ruta: 021502011" data-en="Routing: 021502011">Ruta: 021502011</li>
                 </ul>
-                <div class="warranty-highlight">
+                <div class="warranty-highlight" data-es="Importante: El depósito no es reembolsable" data-en="Important: The deposit is non-refundable">
                     Importante: El depósito no es reembolsable
                 </div>
             </div>
 
             <div class="warranty-card">
-                <h3><span class="warranty-icon">📋</span> Política de Cancelación</h3>
+                <h3 data-es="Política de Cancelación" data-en="Cancellation Policy">Política de Cancelación</h3>
                 <ul>
-                    <li>Sin penalización: primeros 3 días hábiles</li>
-                    <li>Después de 3 días: retención del 50% del depósito</li>
-                    <li>Cambios de orden cotizados por separado</li>
-                    <li>Notificación de costos adicionales por anticipado</li>
+                    <li data-es="Sin penalización: primeros 3 días hábiles" data-en="No penalty: first 3 business days">Sin penalización: primeros 3 días hábiles</li>
+                    <li data-es="Después de 3 días: retención del 50% del depósito" data-en="After 3 days: 50% deposit retained">Después de 3 días: retención del 50% del depósito</li>
+                    <li data-es="Cambios de orden cotizados por separado" data-en="Order changes quoted separately">Cambios de orden cotizados por separado</li>
+                    <li data-es="Notificación de costos adicionales por anticipado" data-en="Advance notice of additional costs">Notificación de costos adicionales por anticipado</li>
                 </ul>
             </div>
 
             <div class="warranty-card">
-                <h3><span class="warranty-icon">🎨</span> Disponibilidad de Materiales</h3>
+                <h3 data-es="Disponibilidad de Materiales" data-en="Material Availability">Disponibilidad de Materiales</h3>
                 <ul>
-                    <li>Algunos laminados pueden requerir importación</li>
-                    <li>Tiempos pueden variar según disponibilidad</li>
-                    <li>Colores y acabados sujetos a existencia</li>
-                    <li>Notificación inmediata de cualquier cambio</li>
+                    <li data-es="Algunos laminados pueden requerir importación" data-en="Some laminates may require importing">Algunos laminados pueden requerir importación</li>
+                    <li data-es="Tiempos pueden variar según disponibilidad" data-en="Times may vary based on availability">Tiempos pueden variar según disponibilidad</li>
+                    <li data-es="Colores y acabados sujetos a existencia" data-en="Colors and finishes subject to availability">Colores y acabados sujetos a existencia</li>
+                    <li data-es="Notificación inmediata de cualquier cambio" data-en="Immediate notification of any changes">Notificación inmediata de cualquier cambio</li>
                 </ul>
             </div>
 
             <div class="warranty-card">
-                <h3><span class="warranty-icon">🔨</span> Servicios Incluidos</h3>
+                <h3 data-es="Servicios Incluidos" data-en="Included Services">Servicios Incluidos</h3>
                 <ul>
-                    <li>Instalación de fregadero y tuberías</li>
-                    <li>Instalación de microondas extractor</li>
-                    <li>Mano de obra especializada</li>
-                    <li style="color: var(--espresso);">Herrajes e instalaciones completas</li>
+                    <li data-es="Instalación de fregadero y tuberías" data-en="Sink and pipe installation">Instalación de fregadero y tuberías</li>
+                    <li data-es="Instalación de microondas extractor" data-en="Extractor microwave installation">Instalación de microondas extractor</li>
+                    <li data-es="Mano de obra especializada" data-en="Specialized labor">Mano de obra especializada</li>
+                    <li data-es="Herrajes Blum e instalaciones completas" data-en="Blum hardware and complete installations">Herrajes Blum e instalaciones completas</li>
                 </ul>
             </div>
-        </div>
-
-        <div style="background: #f5f5f5; border-radius: 20px; padding: 2.5rem; margin-top: 3rem; max-width: 900px; margin-left: auto; margin-right: auto;">
-            <h3 style="font-size: 1.5rem; color: var(--espresso); margin-bottom: 1.5rem; text-align: center;">❌ No Incluido en el Servicio</h3>
-            <ul style="list-style: none; padding: 0;">
-                <li style="padding: 0.8rem 0; border-bottom: 1px solid rgba(62, 39, 35, 0.1); padding-left: 2rem; position: relative; color: rgba(62, 39, 35, 0.7);">
-                    <span style="position: absolute; left: 0; color: var(--caramel);">•</span>
-                    Trabajos de plomería y electricidad requeridos
-                </li>
-                <li style="padding: 0.8rem 0; border-bottom: 1px solid rgba(62, 39, 35, 0.1); padding-left: 2rem; position: relative; color: rgba(62, 39, 35, 0.7);">
-                    <span style="position: absolute; left: 0; color: var(--caramel);">•</span>
-                    Movimientos eléctricos y de tuberías
-                </li>
-                <li style="padding: 0.8rem 0; border-bottom: 1px solid rgba(62, 39, 35, 0.1); padding-left: 2rem; position: relative; color: rgba(62, 39, 35, 0.7);">
-                    <span style="position: absolute; left: 0; color: var(--caramel);">•</span>
-                    Suministro de electrodomésticos (nevera, estufa, horno, microondas, dishwasher, ice maker, etc.)
-                </li>
-                <li style="padding: 0.8rem 0; padding-left: 2rem; position: relative; color: rgba(62, 39, 35, 0.7);">
-                    <span style="position: absolute; left: 0; color: var(--caramel);">•</span>
-                    Demolición de construcción y disposición de escombros
-                </li>
-            </ul>
         </div>
     </section>
 
     <!-- Quote Section -->
     <section id="cotizacion" class="quote-section">
         <div class="quote-container">
-            <h2>Solicita tu Cotización</h2>
-            <p>Obtén un estimado personalizado de tu proyecto. Sube fotos y medidas para recibir una cotización precisa sin necesidad de visita.</p>
+            <h2 data-es="Solicita tu Cotización" data-en="Request Your Quote">Solicita tu Cotización</h2>
+            <p data-es="Obtén un estimado personalizado de tu proyecto. Sube fotos y medidas para recibir una cotización precisa sin necesidad de visita."
+               data-en="Get a personalized estimate for your project. Upload photos and measurements to receive an accurate quote without needing a visit.">
+               Obtén un estimado personalizado de tu proyecto. Sube fotos y medidas para recibir una cotización precisa sin necesidad de visita.
+            </p>
             
             <div class="upload-info">
-                <h3>¿Qué incluye tu cotización?</h3>
+                <h3 data-es="¿Qué incluye tu cotización?" data-en="What does your quote include?">¿Qué incluye tu cotización?</h3>
                 <ul>
-                    <li>Análisis detallado de tu espacio</li>
-                    <li>Propuesta de diseño personalizado</li>
-                    <li>Layout en 3D desde $100 (según magnitud del proyecto)</li>
-                    <li>Estimado de costos completo</li>
-                    <li>Asesoría profesional sin compromiso</li>
-                    <li>Especificaciones de materiales y herrajes</li>
+                    <li data-es="Análisis detallado de tu espacio" data-en="Detailed analysis of your space">Análisis detallado de tu espacio</li>
+                    <li data-es="Propuesta de diseño personalizado" data-en="Custom design proposal">Propuesta de diseño personalizado</li>
+                    <li data-es="Layout en 3D desde $100 (según magnitud del proyecto)" data-en="3D layout from $100 (based on project scope)">Layout en 3D desde $100 (según magnitud del proyecto)</li>
+                    <li data-es="Estimado de costos completo" data-en="Complete cost estimate">Estimado de costos completo</li>
+                    <li data-es="Asesoría profesional sin compromiso" data-en="Professional advice with no commitment">Asesoría profesional sin compromiso</li>
+                    <li data-es="Especificaciones de materiales y herrajes" data-en="Material and hardware specifications">Especificaciones de materiales y herrajes</li>
                 </ul>
             </div>
 
-            <div style="background: var(--chocolate); color: white; padding: 1.5rem; border-radius: 15px; margin: 2rem 0;">
-                <p style="font-size: 1.1rem; margin: 0; font-weight: 600;">
-                    📧 Envía tus fotos y medidas por correo para una cotización detallada
+            <div class="quote-email-box">
+                <p data-es="Envía tus fotos y medidas por correo para una cotización detallada"
+                   data-en="Send your photos and measurements by email for a detailed quote">
+                   Envía tus fotos y medidas por correo para una cotización detallada
                 </p>
             </div>
             
-            <a href="mailto:Intcabinetsgroup@outlook.com" class="btn-primary" style="display: inline-block; margin-top: 1rem;">Enviar Solicitud</a>
+            <a href="mailto:intcabinetsgroupcorp@gmail.com" class="btn-primary" style="display:inline-block;margin-top:1rem;"
+               data-es="Enviar Solicitud" data-en="Send Request">Enviar Solicitud</a>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contacto" class="contact">
-        <h2 class="section-title">Contáctanos</h2>
-        <p class="section-subtitle">Visítanos en nuestro showroom en Carolina, Puerto Rico o comunícate con nosotros.</p>
+        <h2 class="section-title" data-es="Contáctanos" data-en="Contact Us">Contáctanos</h2>
+        <p class="section-subtitle"
+           data-es="Visítanos en nuestro showroom en Carolina, Puerto Rico o comunícate con nosotros."
+           data-en="Visit us at our showroom in Carolina, Puerto Rico or reach out to us.">
+           Visítanos en nuestro showroom en Carolina, Puerto Rico o comunícate con nosotros.
+        </p>
         
         <div class="contact-grid">
             <div class="contact-info">
                 <div class="contact-item">
-                    <div class="contact-item-icon">📍</div>
+                    <div class="contact-item-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+                    </div>
                     <div class="contact-item-content">
-                        <h3>Showroom</h3>
-                        <p><a href="https://www.google.com/maps/search/?api=1&query=Bo.+Cacao+carr+858+K3+H4+Carolina,+PR+00986" target="_blank">Bo. Cacao carr 858 K3 H4<br>Carolina, PR 00986<br><br></a>
+                        <h3 data-es="Showroom" data-en="Showroom">Showroom</h3>
+                        <p><a href="https://www.google.com/maps/search/?api=1&query=Bo.+Cacao+carr+858+K3+H4+Carolina,+PR+00986" target="_blank">Bo. Cacao carr 858 K3 H4<br>Carolina, PR 00986</a></p>
                     </div>
                 </div>
 
                 <div class="contact-item">
-                    <div class="contact-item-icon">⏰</div>
+                    <div class="contact-item-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
                     <div class="contact-item-content">
-                        <h3>Horario</h3>
-                        <p>Lunes a Viernes: <u>9:00 AM - 6:00 PM</u><br>Sábados: <u>9:00 AM - 1:00 PM</u></p>
+                        <h3 data-es="Horario" data-en="Hours">Horario</h3>
+                        <p data-es="Lunes a Viernes: 9:00 AM – 6:00 PM<br>Sábados: 9:00 AM – 1:00 PM"
+                           data-en="Monday to Friday: 9:00 AM – 6:00 PM<br>Saturdays: 9:00 AM – 1:00 PM">
+                           Lunes a Viernes: 9:00 AM – 6:00 PM<br>Sábados: 9:00 AM – 1:00 PM
+                        </p>
                     </div>
                 </div>
 
                 <div class="contact-item">
-                    <div class="contact-item-icon">📞</div>
+                    <div class="contact-item-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+                    </div>
                     <div class="contact-item-content">
-                        <h3>Teléfono</h3>
+                        <h3 data-es="Teléfono" data-en="Phone">Teléfono</h3>
                         <p><a href="tel:7879429154">787-942-9154</a></p>
                     </div>
                 </div>
 
                 <div class="contact-item">
-                    <div class="contact-item-icon">📧</div>
+                    <div class="contact-item-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+                    </div>
                     <div class="contact-item-content">
                         <h3>Email</h3>
-                        <p><a href="mailto:Intcabinetsgroup@outlook.com">Intcabinetsgroup@outlook.com</a></p>
+                        <p><a href="mailto:intcabinetsgroupcorp@gmail.com">intcabinetsgroupcorp@gmail.com</a></p>
                     </div>
                 </div>
 
+                <!-- Payment Methods -->
                 <div class="payment-methods">
-                    <h3>Métodos de Pago</h3>
+                    <h3 data-es="Métodos de Pago" data-en="Payment Methods">Métodos de Pago</h3>
                     <div class="payment-icons">
-                        <span class="payment-badge">💵 Efectivo</span>
-                        <span class="payment-badge">📝 Cheque</span>
-                        <span class="payment-badge">💳 Visa</span>
-                        <span class="payment-badge">💳 MasterCard</span>
-                        <span class="payment-badge">💳 AMEX</span>
+                        <span class="payment-badge" data-es="Efectivo" data-en="Cash">Efectivo</span>
+                        <span class="payment-badge" data-es="Cheque" data-en="Check">Cheque</span>
+                        <!-- Card logos via SVG brand icons -->
+                        <span class="payment-badge card-badge">
+                            <svg viewBox="0 0 48 16" class="card-logo"><text x="0" y="13" font-family="Arial" font-weight="900" font-size="14" fill="#1A1F71">VISA</text></svg>
+                        </span>
+                        <span class="payment-badge card-badge">
+                            <svg viewBox="0 0 60 20" class="card-logo">
+                                <circle cx="20" cy="10" r="10" fill="#EB001B" opacity="0.9"/>
+                                <circle cx="36" cy="10" r="10" fill="#F79E1B" opacity="0.9"/>
+                                <ellipse cx="28" cy="10" rx="5" ry="9" fill="#FF5F00"/>
+                            </svg>
+                        </span>
+                        <span class="payment-badge card-badge">
+                            <svg viewBox="0 0 60 20" class="card-logo"><text x="0" y="15" font-family="Arial" font-weight="800" font-size="13" fill="#007BC1">AMEX</text></svg>
+                        </span>
                     </div>
-                    <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--white);">
-                        ✓ Financiamiento disponible con Synchrony<br>
-                        ✓ Próximamente: Klarna<br>
-                        ✓ Transferencias bancarias - Banco Popular
+                    <p style="margin-top:1.5rem;font-size:0.88rem;color:var(--warm-stone);"
+                       data-es="Financiamiento disponible con Synchrony · Próximamente: Klarna · Transferencias bancarias — Banco Popular"
+                       data-en="Financing available with Synchrony · Coming soon: Klarna · Bank transfers — Banco Popular">
+                       Financiamiento disponible con Synchrony · Próximamente: Klarna · Transferencias bancarias — Banco Popular
                     </p>
                 </div>
             </div>
 
             <div class="map-container">
                 <div class="map-placeholder">
-                    <h3>📍 Carolina, PR</h3>
-                    <p style="margin-top: 1rem;">Bo. Cacao carr 858 K3 H4</p>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:48px;height:48px;color:var(--golden-wheat);margin-bottom:1rem;"><path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+                    <h3>Carolina, PR</h3>
+                    <p style="margin-top:0.8rem;">Bo. Cacao carr 858 K3 H4</p>
                     <p>Carolina, PR 00986</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram / Social Section -->
+    <section class="social-section">
+        <h2 class="section-title" data-es="Síguenos en Instagram" data-en="Follow Us on Instagram">Síguenos en Instagram</h2>
+        <p class="section-subtitle"
+           data-es="Descubre nuestros proyectos más recientes y encuentra inspiración para tu próximo espacio."
+           data-en="Discover our latest projects and find inspiration for your next space.">
+           Descubre nuestros proyectos más recientes y encuentra inspiración para tu próximo espacio.
+        </p>
+
+        <div class="instagram-wrapper">
+            
+            <div class="instagram-feed-placeholder">
+            <script src="https://elfsightcdn.com/platform.js" async></script>
+            <div class="elfsight-app-0e9467a6-3f9e-4cb2-a647-246476571898" data-elfsight-app-lazy></div>
+                            <a href="https://www.instagram.com/intcabinetsgroupcorp_/" target="_blank" rel="noopener noreferrer" class="btn-primary ig-cta"
+                            data-es="Ver más en Instagram" data-en="View More on Instagram">Ver más en Instagram</a>
             </div>
         </div>
     </section>
@@ -370,116 +492,142 @@
         <div class="footer-content">
             <div class="footer-about">
                 <h3>International Cabinets Group Corp</h3>
-                <p>Desde 2022 transformando espacios en Puerto Rico con muebles de la más alta calidad. Especialistas en cocinas, baños, closets y más.</p>
-                <p style="opacity: 0.6; font-size: 0.9rem;">Materiales PVC e Hidrófugos | Herrajes Hafele y Salice Futura | Diseño Personalizado | Instalación Profesional</p>
+                <p data-es="Desde 2022 transformando espacios en Puerto Rico con muebles de la más alta calidad. Especialistas en cocinas, baños, closets y más."
+                   data-en="Since 2022 transforming spaces in Puerto Rico with the highest quality furniture. Specialists in kitchens, bathrooms, closets and more.">
+                   Desde 2022 transformando espacios en Puerto Rico con muebles de la más alta calidad. Especialistas en cocinas, baños, closets y más.
+                </p>
+                <p style="opacity:0.6;font-size:0.85rem;"
+                   data-es="Materiales PVC e Hidrófugos · Herrajes Blum · Diseño Personalizado · Instalación por Profesionales"
+                   data-en="PVC & Moisture-Resistant Materials · Blum Hardware · Custom Design · Professional Installation">
+                   Materiales PVC e Hidrófugos · Herrajes Blum · Diseño Personalizado · Instalación por Profesionales
+                </p>
+                <!-- Social links in footer -->
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/intcabinetsgroupcorp_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                </div>
             </div>
 
             <div class="footer-section">
-                <h4>Navegación</h4>
+                <h4 data-es="Navegación" data-en="Navigation">Navegación</h4>
                 <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#colecciones">Colecciones</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#garantia">Garantía</a></li>
+                    <li><a href="#inicio"      data-es="Inicio"      data-en="Home">Inicio</a></li>
+                    <li><a href="#nosotros"    data-es="Nosotros"    data-en="About Us">Nosotros</a></li>
+                    <li><a href="#colecciones" data-es="Colecciones" data-en="Collections">Colecciones</a></li>
+                    <li><a href="#servicios"   data-es="Servicios"   data-en="Services">Servicios</a></li>
+                    <li><a href="#garantia"    data-es="Garantía"    data-en="Warranty">Garantía</a></li>
                 </ul>
             </div>
 
             <div class="footer-section">
-                <h4>Colecciones</h4>
+                <h4 data-es="Colecciones" data-en="Collections">Colecciones</h4>
                 <ul>
-                    <li><a href="#colecciones">NOVA - Compacta</a></li>
-                    <li><a href="#colecciones">MILÁN - Mediana</a></li>
-                    <li><a href="#colecciones">SOLARA - Grande</a></li>
-                    <li><a href="#colecciones">MONACO - Premium</a></li>
+                    <li><a href="#colecciones">NOVA</a></li>
+                    <li><a href="#colecciones">MILÁN</a></li>
+                    <li><a href="#colecciones">SOLARA</a></li>
+                    <li><a href="#colecciones">MONACO</a></li>
                 </ul>
             </div>
 
             <div class="footer-section">
-                <h4>Contacto</h4>
+                <h4 data-es="Contacto" data-en="Contact">Contacto</h4>
                 <ul>
                     <li><a href="tel:7879429154">787-942-9154</a></li>
-                    <li><a href="mailto:Intcabinetsgroup@outlook.com">Intcabinetsgroup@outlook.com</a></li>
-                    <li><a href="#cotizacion">Cotización</a></li>
-                    <li><a href="#contacto">Ubicación</a></li>
+                    <li><a href="mailto:intcabinetsgroupcorp@gmail.com">intcabinetsgroupcorp@gmail.com</a></li>
+                    <li><a href="#cotizacion" data-es="Cotización" data-en="Quote">Cotización</a></li>
+                    <li><a href="#contacto"   data-es="Ubicación"  data-en="Location">Ubicación</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <img src="images/mainlogo_background.jpeg" alt="International Cabinets Group Corp" class="logo">
-            <link rel="shortcut icon" href="images/mainlogo_background.jpeg" type="image/x-icon">
-            <p>&copy; 2026 International Cabinets Group Corp. Todos los derechos reservados. | Bo. Cacao carr 858 K3 H4, Carolina, PR 00986</p>
+            <img src="images/mainlogo_background.jpeg" alt="International Cabinets Group Corp">
+            <p>&copy; 2026 International Cabinets Group Corp. <span data-es="Todos los derechos reservados." data-en="All rights reserved.">Todos los derechos reservados.</span> | Bo. Cacao carr 858 K3 H4, Carolina, PR 00986</p>
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+    <script>
+    /* ==============================
+       LANGUAGE TOGGLE
+    ============================== */
+    let currentLang = 'es';
 
-        // Transparent header over hero, white background on all other sections
-        const header = document.querySelector('header');
-        const heroSection = document.querySelector('.hero');
+    function toggleLang() {
+        currentLang = currentLang === 'es' ? 'en' : 'es';
+        document.documentElement.setAttribute('data-lang', currentLang);
+        document.querySelector('.lang-label').textContent = currentLang === 'es' ? 'EN' : 'ES';
+        applyLang();
+    }
 
-        const heroObserver = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    header.classList.remove('scrolled');
+    function applyLang() {
+        document.querySelectorAll('[data-es]').forEach(el => {
+            const text = el.getAttribute('data-' + currentLang);
+            if (text) {
+                if (el.tagName === 'A' || el.tagName === 'BUTTON' || el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'H4' || el.tagName === 'LI') {
+                    el.innerHTML = text;
                 } else {
-                    header.classList.add('scrolled');
+                    el.innerHTML = text;
                 }
-            },
-            {
-                // Trigger as soon as any part of the hero exits the viewport
-                threshold: 0,
-                // Fire when the bottom of the hero crosses the top of the viewport
-                rootMargin: '0px 0px 0px 0px'
             }
-        );
-
-        heroObserver.observe(heroSection);
-
-        // Animate elements on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                   if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.about-content, .collection-card, .service-card, .guarantee-item, .contact-item, .section-title, .section-subtitle').forEach(el => {
-            observer.observe(el);
         });
+    }
+
+    /* ==============================
+       HAMBURGER MENU
+    ============================== */
+    function toggleMenu() {
+        const menu = document.getElementById('mobileMenu');
+        const hamburger = document.querySelector('.hamburger');
+        menu.classList.toggle('open');
+        hamburger.classList.toggle('active');
+    }
+
+    /* ==============================
+       SMOOTH SCROLL
+    ============================== */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+
+    /* ==============================
+       HEADER SCROLL BEHAVIOUR
+    ============================== */
+    const header = document.querySelector('header');
+    const heroSection = document.querySelector('.hero');
+    const heroObserver = new IntersectionObserver(([entry]) => {
+        header.classList.toggle('scrolled', !entry.isIntersecting);
+    }, { threshold: 0, rootMargin: '0px' });
+    heroObserver.observe(heroSection);
+
+    /* ==============================
+       SCROLL ANIMATIONS
+    ============================== */
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.about-content, .collection-card, .service-card, .warranty-card, .contact-item, .section-title, .section-subtitle, .ig-post').forEach(el => {
+        observer.observe(el);
+    });
     </script>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/17879429154?text=Hola%2C%20me%20interesa%20obtener%20una%20cotizaci%C3%B3n%20para%20mi%20proyecto." 
-       class="whatsapp-float" 
-       target="_blank" 
-       rel="noopener noreferrer"
-       aria-label="Contáctanos por WhatsApp">
+    <a href="https://wa.me/17879429154?text=Hola%2C%20me%20interesa%20obtener%20una%20cotizaci%C3%B3n%20para%20mi%20proyecto."
+       class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
-        ¡Escríbenos!
+        <span data-es="WhatsApp" data-en="WhatsApp">WhatsApp</span>
     </a>
 
 </body>
