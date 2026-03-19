@@ -153,9 +153,31 @@
         </p>
         
         <div class="collections-grid">
+            <!-- NOVA Collection -->
             <div class="collection-card">
-                <div class="collection-image">
-                    <img src="images/nova1.png" alt="NOVA kitchen collection">
+                <div class="collection-image-wrapper">
+                    <div class="collection-slideshow" data-collection="nova">
+                        <img src="images/nova1.png" alt="NOVA kitchen collection - Image 1" class="slideshow-image active">
+                        <img src="images/nova2.png" alt="NOVA kitchen collection - Image 2" class="slideshow-image">
+                        <img src="images/nova3.png" alt="NOVA kitchen collection - Image 3" class="slideshow-image">
+                        
+                        <button class="slideshow-nav prev" onclick="changeSlide('nova', -1)" aria-label="Previous image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="slideshow-nav next" onclick="changeSlide('nova', 1)" aria-label="Next image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                        
+                        <div class="slideshow-dots">
+                            <span class="dot active" onclick="goToSlide('nova', 0)"></span>
+                            <span class="dot" onclick="goToSlide('nova', 1)"></span>
+                            <span class="dot" onclick="goToSlide('nova', 2)"></span>
+                        </div>
+                    </div>
                 </div>
                 <div class="collection-content">
                     <h3 class="collection-name">NOVA</h3>
@@ -168,9 +190,31 @@
                 </div>
             </div>
 
+            <!-- MILÁN Collection -->
             <div class="collection-card">
-                <div class="collection-image">
-                    <img src="images/milan1.png" alt="MILAN kitchen collection">
+                <div class="collection-image-wrapper">
+                    <div class="collection-slideshow" data-collection="milan">
+                        <img src="images/milan1.png" alt="MILAN kitchen collection - Image 1" class="slideshow-image active">
+                        <img src="images/milan2.png" alt="MILAN kitchen collection - Image 2" class="slideshow-image">
+                        <img src="images/milan3.png" alt="MILAN kitchen collection - Image 3" class="slideshow-image">
+                        
+                        <button class="slideshow-nav prev" onclick="changeSlide('milan', -1)" aria-label="Previous image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="slideshow-nav next" onclick="changeSlide('milan', 1)" aria-label="Next image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                        
+                        <div class="slideshow-dots">
+                            <span class="dot active" onclick="goToSlide('milan', 0)"></span>
+                            <span class="dot" onclick="goToSlide('milan', 1)"></span>
+                            <span class="dot" onclick="goToSlide('milan', 2)"></span>
+                        </div>
+                    </div>
                 </div>
                 <div class="collection-content">
                     <h3 class="collection-name">MILÁN</h3>
@@ -183,9 +227,31 @@
                 </div>
             </div>
 
+            <!-- SOLARA Collection -->
             <div class="collection-card">
-                <div class="collection-image">
-                    <img src="images/solara1.png" alt="SOLARA kitchen collection">
+                <div class="collection-image-wrapper">
+                    <div class="collection-slideshow" data-collection="solara">
+                        <img src="images/solara1.png" alt="SOLARA kitchen collection - Image 1" class="slideshow-image active">
+                        <img src="images/solara2.png" alt="SOLARA kitchen collection - Image 2" class="slideshow-image">
+                        <img src="images/solara3.png" alt="SOLARA kitchen collection - Image 3" class="slideshow-image">
+                        
+                        <button class="slideshow-nav prev" onclick="changeSlide('solara', -1)" aria-label="Previous image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="slideshow-nav next" onclick="changeSlide('solara', 1)" aria-label="Next image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                        
+                        <div class="slideshow-dots">
+                            <span class="dot active" onclick="goToSlide('solara', 0)"></span>
+                            <span class="dot" onclick="goToSlide('solara', 1)"></span>
+                            <span class="dot" onclick="goToSlide('solara', 2)"></span>
+                        </div>
+                    </div>
                 </div>
                 <div class="collection-content">
                     <h3 class="collection-name">SOLARA</h3>
@@ -198,9 +264,31 @@
                 </div>
             </div>
 
+            <!-- MONACO Collection -->
             <div class="collection-card">
-                <div class="collection-image">
-                    <img src="images/monaco1.png" alt="MONACO kitchen collection">
+                <div class="collection-image-wrapper">
+                    <div class="collection-slideshow" data-collection="monaco">
+                        <img src="images/m_wide.JPG" alt="MONACO kitchen collection - Wide view" class="slideshow-image active">
+                        <img src="images/m_close.JPG" alt="MONACO kitchen collection - Close view" class="slideshow-image">
+                        <img src="images/m_closer.JPG" alt="MONACO kitchen collection - Closer view" class="slideshow-image m-closer-shift">
+                        
+                        <button class="slideshow-nav prev" onclick="changeSlide('monaco', -1)" aria-label="Previous image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="slideshow-nav next" onclick="changeSlide('monaco', 1)" aria-label="Next image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                        
+                        <div class="slideshow-dots">
+                            <span class="dot active" onclick="goToSlide('monaco', 0)"></span>
+                            <span class="dot" onclick="goToSlide('monaco', 1)"></span>
+                            <span class="dot" onclick="goToSlide('monaco', 2)"></span>
+                        </div>
+                    </div>
                 </div>
                 <div class="collection-content">
                     <h3 class="collection-name">MONACO</h3>
@@ -627,6 +715,51 @@
     document.querySelectorAll('.about-content, .collection-card, .service-card, .warranty-card, .contact-item, .section-title, .section-subtitle, .ig-post').forEach(el => {
         observer.observe(el);
     });
+
+    /* ==============================
+       COLLECTION SLIDESHOW
+    ============================== */
+    function changeSlide(collection, direction) {
+        const slideshow = document.querySelector(`.collection-slideshow[data-collection="${collection}"]`);
+        if (!slideshow) return;
+        
+        const images = slideshow.querySelectorAll('.slideshow-image');
+        const dots = slideshow.querySelectorAll('.dot');
+        
+        // Find current active image
+        let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+        
+        // Calculate new index
+        let newIndex = currentIndex + direction;
+        if (newIndex >= images.length) newIndex = 0;
+        if (newIndex < 0) newIndex = images.length - 1;
+        
+        // Update images
+        images.forEach(img => img.classList.remove('active'));
+        images[newIndex].classList.add('active');
+        
+        // Update dots
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[newIndex].classList.add('active');
+    }
+
+    function goToSlide(collection, index) {
+        const slideshow = document.querySelector(`.collection-slideshow[data-collection="${collection}"]`);
+        if (!slideshow) return;
+        
+        const images = slideshow.querySelectorAll('.slideshow-image');
+        const dots = slideshow.querySelectorAll('.dot');
+        
+        if (index >= images.length || index < 0) return;
+        
+        // Update images
+        images.forEach(img => img.classList.remove('active'));
+        images[index].classList.add('active');
+        
+        // Update dots
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[index].classList.add('active');
+    }
     </script>
 
     <!-- WhatsApp Floating Button -->
