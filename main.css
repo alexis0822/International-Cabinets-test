@@ -471,19 +471,10 @@ section {
 .service-card {
     background: rgba(255,255,255,0.03);
     border: 1px solid var(--border); border-radius: 4px;
-    padding: 2.2rem 1.8rem; text-align: center;
+    padding: 1.5rem; text-align: center;
     transition: all 0.3s ease;
 }
 .service-card:hover { background: rgba(184,158,115,0.08); transform: translateY(-5px); border-color: rgba(184,158,115,0.35); }
-
-.service-icon {
-    width: 72px; height: 72px;
-    background: rgba(184,158,115,0.08);
-    border: 1px solid var(--border); border-radius: 4px;
-    display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 1.5rem; color: var(--golden-wheat);
-}
-.service-icon svg { width: 34px; height: 34px; }
 
 .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 0.9rem; color: var(--golden-wheat); letter-spacing: 0.5px; }
 .service-card p  { font-size: 0.88rem; line-height: 1.7; color: var(--text-muted); }
@@ -492,6 +483,25 @@ section {
 .services .section-title, .services .section-subtitle,
 .warranty .section-title, .warranty .section-subtitle {
     max-width: 1400px; margin-left: auto; margin-right: auto;
+}
+
+/* Estilos para las nuevas imágenes de servicios */
+.service-image {
+    width: 100%;
+    height: 180px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border);
+}
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.service-card:hover .service-image img {
+    transform: scale(1.08);
 }
 
 /* =============================================
@@ -584,7 +594,7 @@ section {
 }
 
 /* =============================================
-   CONTACT
+   CONTACT & SOCIAL
    ============================================= */
 .contact {
     background: var(--bg-page);
@@ -643,45 +653,6 @@ section {
 .map-placeholder { text-align: center; color: var(--text-muted); padding: 2rem; }
 .map-placeholder h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--natural-linen); margin-bottom: 0.5rem; }
 .map-placeholder p  { color: var(--text-muted); }
-
-/* =============================================
-   INSTAGRAM / SOCIAL
-   ============================================= */
-.social-section {
-    background: var(--bg-section);
-    background-image: var(--texture);
-    background-size: 400px 400px;
-    padding: 6rem 5%; width: 100%; max-width: none; margin: 0;
-}
-
-.instagram-wrapper { max-width: 1100px; margin: 0 auto; }
-.instagram-feed-placeholder { text-align: center; }
-
-.ig-profile-link {
-    display: inline-flex; align-items: center; gap: 0.75rem;
-    margin-bottom: 1.5rem;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid var(--border);
-    padding: 0.8rem 1.6rem; border-radius: 50px;
-}
-.ig-profile-link svg { width: 22px; height: 22px; color: var(--golden-wheat); }
-.ig-profile-link a { color: var(--almond-cream); text-decoration: none; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.5px; transition: color 0.3s; }
-.ig-profile-link a:hover { color: var(--golden-wheat); }
-
-.ig-note { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; font-style: italic; line-height: 1.6; }
-
-.ig-mock-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 2rem; border-radius: 4px; overflow: hidden; }
-.ig-post { aspect-ratio: 1; position: relative; overflow: hidden; opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
-.ig-post::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.15); }
-.ig-post.animate-in { opacity: 1; transform: translateY(0); }
-.ig-post:nth-child(1) { background: linear-gradient(135deg, #3d2a1a, #6b4f35); }
-.ig-post:nth-child(2) { background: linear-gradient(135deg, #2a1f15, #b89e73); }
-.ig-post:nth-child(3) { background: linear-gradient(135deg, #4a3f35, #7a6650); }
-.ig-post:nth-child(4) { background: linear-gradient(135deg, #1e1a16, #9a8460); }
-.ig-post:nth-child(5) { background: linear-gradient(135deg, #3d2500, #c4a87c); }
-.ig-post:nth-child(6) { background: linear-gradient(135deg, #231f1a, #a59586); }
-
-.ig-cta { margin-top: 1rem; display: inline-block; }
 
 /* =============================================
    FOOTER
@@ -746,7 +717,6 @@ footer {
     .contact-grid { grid-template-columns: 1fr; }
     .footer-content { grid-template-columns: 1fr 1fr; }
     .features-grid { grid-template-columns: 1fr; }
-    .ig-mock-grid { grid-template-columns: repeat(2, 1fr); }
     .section-title { font-size: 2rem; }
     section { padding: 4rem 5%; }
 }
@@ -756,7 +726,6 @@ footer {
     .collections-grid { grid-template-columns: 1fr; }
     .services-grid { grid-template-columns: 1fr; }
     .footer-content { grid-template-columns: 1fr; }
-    .ig-mock-grid { grid-template-columns: repeat(2, 1fr); }
     .nav-right .cta-button { display: none; }
 }
 
@@ -792,3 +761,44 @@ footer {
     80% { transform: translateY(3px); }
     100%{ opacity: 1; transform: translateY(0); }
 }
+
+/* Estilos para el Modal de Galería y Títulos Clickeables */
+.clickable-title {
+    cursor: pointer;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+.clickable-title:hover {
+    color: var(--golden-wheat);
+}
+.click-hint {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    opacity: 0.6;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+.modal-gallery {
+    display: none; position: fixed; z-index: 9999; left: 0; top: 0;
+    width: 100%; height: 100%; background-color: rgba(15, 12, 9, 0.95);
+    align-items: center; justify-content: center; backdrop-filter: blur(8px);
+}
+.gallery-content {
+    max-width: 85%; max-height: 85vh; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    object-fit: contain;
+}
+.close-gallery {
+    position: absolute; top: 20px; right: 30px; font-size: 45px; color: var(--golden-wheat);
+    cursor: pointer; transition: color 0.3s;
+}
+.close-gallery:hover { color: #fff; }
+.gallery-nav {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(0,0,0,0.5); border: 1px solid var(--border); color: var(--golden-wheat);
+    width: 50px; height: 50px; border-radius: 50%; cursor: pointer;
+    font-size: 20px; transition: all 0.3s ease;
+}
+.gallery-nav:hover { background: var(--golden-wheat); color: #fff; transform: translateY(-50%) scale(1.1); }
+.gallery-nav.prev { left: 30px; }
+.gallery-nav.next { right: 30px; }
