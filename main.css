@@ -488,11 +488,22 @@ section {
 .service-image {
     width: 100%;
     height: 180px;
+    position: relative;
     border-radius: 4px;
     overflow: hidden;
     margin-bottom: 1.5rem;
     border: 1px solid var(--border);
 }
+.service-slideshow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-slideshow .slideshow-image,
 .service-image img {
     width: 100%;
     height: 100%;

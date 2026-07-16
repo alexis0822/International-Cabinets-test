@@ -147,9 +147,9 @@
             <div class="collection-card">
                 <div class="collection-image-wrapper">
                     <div class="collection-slideshow" data-collection="nova">
-                        <img src="images/nova1.png" alt="NOVA kitchen collection - Image 1" class="slideshow-image active">
-                        <img src="images/nova2.png" alt="NOVA kitchen collection - Image 2" class="slideshow-image">
-                        <img src="images/nova3.png" alt="NOVA kitchen collection - Image 3" class="slideshow-image">
+                        <img src="images/nova1.jpeg" alt="NOVA kitchen collection - Image 1" class="slideshow-image active">
+                        <img src="images/nova2.jpeg" alt="NOVA kitchen collection - Image 2" class="slideshow-image">
+                        <img src="images/nova3.jpeg" alt="NOVA kitchen collection - Image 3" class="slideshow-image">
                         
                         <button class="slideshow-nav prev" onclick="changeSlide('nova', -1)" aria-label="Previous image">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -301,7 +301,24 @@
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-image">
-                    <img src="images/kitchen1.png" alt="Cocinas">
+                    <div class="service-slideshow" data-service="kitchen">
+                        <img src="images/kitchen1.png" alt="Cocinas" class="slideshow-image active">
+                        <img src="images/m_close.JPG" alt="Cocinas" class="slideshow-image">
+                        <img src="images/621A3797.JPG" alt="Cocinas" class="slideshow-image">
+
+                        <button class="slideshow-nav prev" onclick="changeServiceSlide('kitchen', -1)" aria-label="Previous image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        </button>
+                        <button class="slideshow-nav next" onclick="changeServiceSlide('kitchen', 1)" aria-label="Next image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
+
+                        <div class="slideshow-dots">
+                            <span class="dot active" onclick="goToServiceSlide('kitchen', 0)"></span>
+                            <span class="dot" onclick="goToServiceSlide('kitchen', 1)"></span>
+                            <span class="dot" onclick="goToServiceSlide('kitchen', 2)"></span>
+                        </div>
+                    </div>
                 </div>
                 <h3 data-es="Cocinas" data-en="Kitchens">Cocinas</h3>
                 <p data-es="Diseño y fabricación de cocinas de alta calidad en PVC e Hidrófugo, adaptadas a tu espacio y estilo de vida."
@@ -311,7 +328,24 @@
             </div>
             <div class="service-card">
                 <div class="service-image">
-                    <img src="images/bathroom1.png" alt="Muebles para Baños">
+                    <div class="service-slideshow" data-service="bathroom">
+                        <img src="images/bathroom1.png" alt="Muebles para Baños" class="slideshow-image active">
+                        <img src="images/bathroom2.png" alt="Muebles para Baños" class="slideshow-image">
+                        <img src="images/bathroom3.png" alt="Muebles para Baños" class="slideshow-image">
+
+                        <button class="slideshow-nav prev" onclick="changeServiceSlide('bathroom', -1)" aria-label="Previous image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        </button>
+                        <button class="slideshow-nav next" onclick="changeServiceSlide('bathroom', 1)" aria-label="Next image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
+
+                        <div class="slideshow-dots">
+                            <span class="dot active" onclick="goToServiceSlide('bathroom', 0)"></span>
+                            <span class="dot" onclick="goToServiceSlide('bathroom', 1)"></span>
+                            <span class="dot" onclick="goToServiceSlide('bathroom', 2)"></span>
+                        </div>
+                    </div>
                 </div>
                 <h3 data-es="Muebles para Baños" data-en="Bathroom Furniture">Muebles para Baños</h3>
                 <p data-es="Vanities, muebles y accesorios resistentes a la humedad, elegantes y funcionales para tu espacio de relajación."
@@ -321,7 +355,24 @@
             </div>
             <div class="service-card">
                 <div class="service-image">
-                    <img src="images/uni_pared1.png" alt="Unidades de Pared">
+                    <div class="service-slideshow" data-service="wall">
+                        <img src="images/uni_pared1.png" alt="Unidades de Pared" class="slideshow-image active">
+                        <img src="images/621A3798.JPG" alt="Unidades de Pared" class="slideshow-image">
+                        <img src="images/621A3771.JPG" alt="Unidades de Pared" class="slideshow-image">
+
+                        <button class="slideshow-nav prev" onclick="changeServiceSlide('wall', -1)" aria-label="Previous image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        </button>
+                        <button class="slideshow-nav next" onclick="changeServiceSlide('wall', 1)" aria-label="Next image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
+
+                        <div class="slideshow-dots">
+                            <span class="dot active" onclick="goToServiceSlide('wall', 0)"></span>
+                            <span class="dot" onclick="goToServiceSlide('wall', 1)"></span>
+                            <span class="dot" onclick="goToServiceSlide('wall', 2)"></span>
+                        </div>
+                    </div>
                 </div>
                 <h3 data-es="Unidades de Pared" data-en="Wall Units">Unidades de Pared</h3>
                 <p data-es="Unidades de entretenimiento y pared diseñadas para maximizar el espacio con estilo y funcionalidad modernos."
@@ -331,7 +382,24 @@
             </div>
             <div class="service-card">
                 <div class="service-image">
-                    <img src="images/closet1.png" alt="Closets">
+                    <div class="service-slideshow" data-service="closet">
+                        <img src="images/closet1.png" alt="Closets" class="slideshow-image active">
+                        <img src="images/showroom.jpg" alt="Closets" class="slideshow-image">
+                        <img src="images/closet1.png" alt="Closets" class="slideshow-image">
+
+                        <button class="slideshow-nav prev" onclick="changeServiceSlide('closet', -1)" aria-label="Previous image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        </button>
+                        <button class="slideshow-nav next" onclick="changeServiceSlide('closet', 1)" aria-label="Next image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
+
+                        <div class="slideshow-dots">
+                            <span class="dot active" onclick="goToServiceSlide('closet', 0)"></span>
+                            <span class="dot" onclick="goToServiceSlide('closet', 1)"></span>
+                            <span class="dot" onclick="goToServiceSlide('closet', 2)"></span>
+                        </div>
+                    </div>
                 </div>
                 <h3 data-es="Closets" data-en="Closets">Closets</h3>
                 <p data-es="Organización inteligente con diseños personalizados que maximizan el espacio de almacenamiento con elegancia."
@@ -447,7 +515,7 @@
                 </p>
             </div>
             
-            <a href="mailto:intcabinetsgroupcorp@gmail.com" class="btn-primary" style="display:inline-block;margin-top:1rem;"
+            <a href="mailto:intcabinetsgroup@outlook.com" class="btn-primary" style="display:inline-block;margin-top:1rem;"
                data-es="Enviar Solicitud" data-en="Send Request">Enviar Solicitud</a>
         </div>
     </section>
@@ -465,13 +533,7 @@
         <div class="contact-grid">
             <div class="contact-info">
                 <div class="contact-item">
-                    <div class="contact-item-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
-                    </div>
-                    <div class="contact-item-content">
-                        <h3 data-es="Showroom" data-en="Showroom">Showroom</h3>
-                        <p><a href="https://www.google.com/maps/place/International+Cabinets+PR/@18.4208082,-65.9918466,17z/data=!3m1!4b1!4m6!3m5!1s0x8c03656ead2c9a75:0xbf6a5547f8d3eeab!8m2!3d18.4208082!4d-65.9892717!16s%2Fg%2F11txt48lmk?entry=ttu&g_ep=EgoyMDI2MDQyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Baldorioty De Castro Building 502125, Baldorioty Business Center Industrial, Marginal local # 1<br>Carolina, PR 00986</a></p>
-                    </div>
+                    
                 </div>
 
                 <div class="contact-item">
@@ -503,7 +565,7 @@
                     </div>
                     <div class="contact-item-content">
                         <h3>Email</h3>
-                        <p><a href="mailto:intcabinetsgroupcorp@gmail.com">intcabinetsgroupcorp@gmail.com</a></p>
+                        <p><a href="mailto:intcabinetsgroup@outlook.com">intcabinetsgroup@outlook.com</a></p>
                     </div>
                 </div>
 
@@ -595,9 +657,8 @@
                 <h4 data-es="Contacto" data-en="Contact">Contacto</h4>
                 <ul>
                     <li><a href="tel:7879429154">787-942-9154</a></li>
-                    <li><a href="mailto:intcabinetsgroupcorp@gmail.com">intcabinetsgroupcorp@gmail.com</a></li>
+                    <li><a href="mailto:intcabinetsgroup@outlook.com">intcabinetsgroup@outlook.com</a></li>
                     <li><a href="#cotizacion" data-es="Cotización" data-en="Quote">Cotización</a></li>
-                    <li><a href="https://www.google.com/maps/place/International+Cabinets+PR/@18.4208082,-65.9918466,17z/data=!3m1!4b1!4m6!3m5!1s0x8c03656ead2c9a75:0xbf6a5547f8d3eeab!8m2!3d18.4208082!4d-65.9892717!16s%2Fg%2F11txt48lmk?entry=ttu&g_ep=EgoyMDI2MDQyMC4wIKXMDSoASAFQAw%3D%3D"   data-es="Ubicación"  data-en="Location">Ubicación</a></li>
                 </ul>
             </div>
         </div>
@@ -724,6 +785,44 @@
         // Update dots
         dots.forEach(dot => dot.classList.remove('active'));
         dots[index].classList.add('active');
+    }
+
+    /* ==============================
+       SERVICE CARD SLIDESHOWS
+    ============================== */
+    function changeServiceSlide(service, direction) {
+        const slideshow = document.querySelector(`.service-slideshow[data-service="${service}"]`);
+        if (!slideshow) return;
+
+        const images = slideshow.querySelectorAll('.slideshow-image');
+        const dots = slideshow.querySelectorAll('.dot');
+
+        let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+        let newIndex = currentIndex + direction;
+        if (newIndex >= images.length) newIndex = 0;
+        if (newIndex < 0) newIndex = images.length - 1;
+
+        images.forEach(img => img.classList.remove('active'));
+        images[newIndex].classList.add('active');
+
+        dots.forEach(dot => dot.classList.remove('active'));
+        if (dots[newIndex]) dots[newIndex].classList.add('active');
+    }
+
+    function goToServiceSlide(service, index) {
+        const slideshow = document.querySelector(`.service-slideshow[data-service="${service}"]`);
+        if (!slideshow) return;
+
+        const images = slideshow.querySelectorAll('.slideshow-image');
+        const dots = slideshow.querySelectorAll('.dot');
+
+        if (index >= images.length || index < 0) return;
+
+        images.forEach(img => img.classList.remove('active'));
+        images[index].classList.add('active');
+
+        dots.forEach(dot => dot.classList.remove('active'));
+        if (dots[index]) dots[index].classList.add('active');
     }
 
     /* ==============================
